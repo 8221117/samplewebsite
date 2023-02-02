@@ -34,7 +34,20 @@ function onClick(e) {
   } else {
     userName = nameInput.value;
     userEmail = emailInput.value;
-    localStorage.setItem("name", userName);
-    localStorage.setItem("email", userEmail);
+    //localStorage.setItem("name", userName);
+    // localStorage.setItem("email", userEmail);
+
+    // to get in json format
+    var userDetails = {
+      getuserName: userName,
+      getuserMail: userEmail,
+    };
+
+    //console.log(userDetails);
+    let userDetails_serialized = JSON.stringify(userDetails);
+    localStorage.setItem("user", userDetails_serialized);
+
+    let userDetails_deserialized = JSON.parse(localStorage.getItem("user")); // to get back the user details originally as object form.
+    console.log(userDetails_deserialized);
   }
 }

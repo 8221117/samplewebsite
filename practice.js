@@ -46,8 +46,28 @@ function onClick(e) {
     //console.log(userDetails);
     let userDetails_serialized = JSON.stringify(userDetails);
     localStorage.setItem("user", userDetails_serialized);
+    showOnscreen(userDetails);
 
     let userDetails_deserialized = JSON.parse(localStorage.getItem("user")); // to get back the user details originally as object form.
     console.log(userDetails_deserialized);
+
+    // show the user data on the screen .
+
+    function showOnscreen(userDetails) {
+      const parentEle = document.getElementById("users");
+      const childEle = document.createElement("li");
+      childEle.textContent =
+        userDetails.getuserName + "-" + userDetails.getuserMail;
+      parentEle.appendChild(childEle);
+    }
+    /** wrong method var p = document.createElement("p");
+    p.textContent = userDetails.getuserName + "-" + userDetails.getuserMail;
+
+    var li = document.createElement("li");
+    var li = document.getElementById("li-form");
+
+    li.appendChild(p);
+
+    console.log(li);**/
   }
 }

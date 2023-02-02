@@ -32,6 +32,9 @@ function onClick(e) {
     msg.innerHTML = "Please enter all fields";
     setTimeout(() => msg.remove(), 3000);
   } else {
-    console.log("success");
+    userName = nameInput.value;
+    userEmail = emailInput.value;
+    localStorage.setItem("name", userName);
+    localStorage.setItem("email", userEmail);
   }
 }

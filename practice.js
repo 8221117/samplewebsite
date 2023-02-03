@@ -23,7 +23,7 @@ const myForm = document.querySelector("#my-form");
 const nameInput = document.querySelector("#name");
 const emailInput = document.querySelector("#email");
 const msg = document.querySelector(".msg");
-myForm.addEventListener("click", onClick);
+myForm.addEventListener("submit", onClick);
 
 function onClick(e) {
   e.preventDefault();
@@ -72,7 +72,21 @@ function onClick(e) {
         // localStorage.getItem(userDetails.getuserName);
         parentEle.removeChild(childEle);
       };
+      //create edit button
+      const editButton = document.createElement("input");
+      editButton.type = "button";
+      editButton.value = "edit";
+
+      editButton.onclick = () => {
+        localStorage.removeItem(userDetails.getuserMail);
+        // localStorage.removeItem(userDetails.getuserName);
+        // localStorage.getItem(userDetails.getuserName);
+        parentEle.removeChild(childEle);
+        nameInput.value = userDetails.getuserName;
+        emailInput.value = userDetails.getuserMail;
+      };
       childEle.appendChild(delButton);
+      childEle.appendChild(editButton);
       parentEle.appendChild(childEle);
       //parentEle.addEventListener("click", removeli);
       // REMOVE LI on clicking delete button

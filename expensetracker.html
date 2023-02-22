@@ -10,6 +10,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="expensetracker.css"></link>
   </head>
   <body>
     <div></div>
@@ -17,7 +18,8 @@
       <h1 class="text-center">Expense Tracker</h1>
     </header>
     <section class="container">
-      <form>
+      <form id="myform">
+        <div class="mb-3 msg"></div>
         <div class="mb-3">
           <label for="expenseamount" class="form-label"
             >Choose Expense amount :</label
@@ -25,16 +27,20 @@
           <input type="number" id="expenseamount" class="form-control" />
         </div>
         <div class="mb-3">
-          <label for="choose description" class="form-label"
+          <label for="choose-description" class="form-label"
             >Choose Description:</label
           >
-          <input type="text" id="choose description" class="form-control" />
+          <input type="text" id="choose-description" class="form-control" />
         </div>
         <div class="mb-3">
           <label for="Choose a Category" class="form-label"
             >Choose a Category</label
           >
-          <select class="form-select" aria-label="Default select example">
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            id="Category"
+          >
             <option selected>Open this select menu</option>
             <option value="Movie">Movie</option>
             <option value="Food">Food</option>
@@ -45,6 +51,7 @@
         </div>
         <input class="btn text-bg-primary" type="submit" value="Submit" />
       </form>
+      <ul id="finaltracking"></ul>
     </section>
 
     <script
@@ -62,5 +69,6 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script src="expensetracker.js"></script>
   </body>
 </html>

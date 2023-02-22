@@ -34,7 +34,7 @@ function onClick(e) {
     function showOnscreen(expenseTrackerDetails){
       const parentEle = document.getElementById("finaltracking");
       const childEle = document.createElement("li");
-      childEle.className = "list-items";
+      childEle.className = "list-group-item";
       childEle.textContent =expenseTrackerDetails.getAmount+"-"+expenseTrackerDetails.getDescription+"-"+expenseTrackerDetails.getCategory;
       
 

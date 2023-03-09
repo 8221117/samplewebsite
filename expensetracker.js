@@ -24,12 +24,21 @@ function onClick(e) {
       getCategory:Category
     };
 
-    let expensetracker_serialized= JSON.stringify(expenseTrackerDetails);
+    axios.post("https://crudcrud.com/api/d8157d206cef4766bef91f04d0cdaa3a/appointmentData",expenseTrackerDetails)
+    .then((response)=>{
+      showOnscreen(response.data)
+    })
+    .catch((err)=>{
+      document.body.innerHTML=document.body.innerHTML+"<h3>something went wrong</h3>"
+      console.log(err);
+    })
+
+    /**let expensetracker_serialized= JSON.stringify(expenseTrackerDetails);
     localStorage.setItem(expenseTrackerDetails.getAmount,expensetracker_serialized);
     showOnscreen(expenseTrackerDetails);
 
     let expensetracker_Deserialized = JSON.parse(localStorage.getItem("expense"));
-    console.log(expensetracker_Deserialized);
+    console.log(expensetracker_Deserialized);**/
 
     function showOnscreen(expenseTrackerDetails){
       const parentEle = document.getElementById("finaltracking");

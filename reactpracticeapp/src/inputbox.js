@@ -87,16 +87,16 @@ return(
         ))}
 
   <label htmlFor="moviename">MovieName:</label>
-  <input onChange={(event)=>setName(event.target.value)}placeholder="Enter the movie name"></input>
+  <input onChange={(event)=>setName(event.target.value)}   value={name} placeholder="Enter the movie name"></input>
   <br></br>
   <label htmlFor="rating">Rating:</label>
-  <input onChange={(event)=>setRating(event.target.value)} placeholder="Enter the movie rating"></input>
+  <input onChange={(event)=>setRating(event.target.value)} value={rating} placeholder="Enter the movie rating"></input>
   <br></br>
   {/* <label htmlFor="summary">Summary:</label> */}
   
-  <input onChange={(event)=>setSummary(event.target.value)} placeholder="Enter the movie summary"></input>
+  <input onChange={(event)=>setSummary(event.target.value)}  value={summary} placeholder="Enter the movie summary"></input>
   <br></br>
-  <input onChange={(event)=>setPoster(event.target.value)} placeholder="Paste the url of the poster"></input>
+  <input onChange={(event)=>setPoster(event.target.value)} value={poster} placeholder="Paste the url of the poster"></input>
   <br></br>
   {/* copy the movie list and add the new movie to it . */}
   <button onClick={addMovie}>ADD MOVIE</button>

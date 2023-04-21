@@ -1,0 +1,17 @@
+.container{
+
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+ 
+  font-size: medium;
+  flex-wrap: wrap;
+}
+
+.ratingcolor{
+
+  background-color:yellow;
+  height: 5%;
+  width: 5%;
+
+}

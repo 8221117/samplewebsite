@@ -4,6 +4,7 @@ import React from "react";
 import { useState } from "react";
 
 import Inputfield  from "./inputfield";
+import Button from "@mui/material/Button";
 
 // const movieList =[{
 //   moviename:"Jai Bhim",
@@ -100,6 +101,7 @@ return(
   <br></br>
   {/* copy the movie list and add the new movie to it . */}
   <button onClick={addMovie}>ADD MOVIE</button>
+  {/* <Button onClick={addMovie} variant="contained">ADD MOVIE</Button> */}
  
 </div>
 
